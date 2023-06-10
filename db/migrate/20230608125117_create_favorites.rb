@@ -3,7 +3,8 @@ class CreateFavorites < ActiveRecord::Migration[6.1]
     create_table :favorites do |t|
       t.integer :user_id
       t.integer :book_id
-
+      t.integer :follow_id, null: false
+      t.integer :follower_id, null: false
       t.timestamps
     end
   end
